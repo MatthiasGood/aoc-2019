@@ -11,7 +11,7 @@ type test struct {
 
 func TestFuelNeeded(t *testing.T) {
 
-	tests := []test {
+	tests := []test{
 		{input: 12, want: 2},
 		{input: 14, want: 2},
 		{input: 1969, want: 654},
@@ -28,7 +28,7 @@ func TestFuelNeeded(t *testing.T) {
 
 func TestFuelNeededWithFuelMass(t *testing.T) {
 
-	tests := []test {
+	tests := []test{
 		{input: 12, want: 2},
 		{input: 14, want: 2},
 		{input: 1969, want: 966},

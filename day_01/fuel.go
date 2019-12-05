@@ -18,7 +18,8 @@ func main() {
 
 	reader := bufio.NewReader(file)
 
-	sum, err := sumOfFuelRequirements(reader); if err != nil {
+	sum, err := sumOfFuelRequirements(reader)
+	if err != nil {
 		fmt.Println(err)
 	}
 
@@ -33,7 +34,8 @@ func sumOfFuelRequirements(reader *bufio.Reader) (int, error) {
 			break
 		}
 
-		mass, err := strconv.Atoi(string(line)); if err != nil {
+		mass, err := strconv.Atoi(string(line))
+		if err != nil {
 			return sum, fmt.Errorf("line expected to be a number, but got: %s", line)
 		}
 
@@ -57,7 +59,7 @@ func findFuelForModuleWithFuelMass(mass int) int {
 /*
 	To find the fuel required for a module, take its mass,
 	divide by three, round down, and subtract 2.
- */
+*/
 func findFuelForModule(mass int) int {
 	return (mass / 3) - 2
 }
